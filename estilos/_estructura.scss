@@ -1,0 +1,42 @@
+header {
+  background-color: aquamarine;
+  padding: 20px;
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+}
+
+nav {
+  width: 100%;
+
+  h1 {
+    text-align: left;
+    font-size: 24px;
+  }
+
+  h3 {
+    text-align: left;
+    font-size: 20px;
+  }
+}
+
+.encabezadodepagina {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+
+  .boton {
+    align-self: flex-start;
+  }
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    .boton {
+      align-self: center;
+    }
+  }
+}

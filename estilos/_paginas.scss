@@ -1,0 +1,64 @@
+.zonas-padre {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.zona {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.imagen-zona {
+  width: 200px;
+  margin-bottom: 15px;
+}
+
+.boton_de_edificios {
+  display: none;
+}
+
+.titulo-edificio {
+  display: block;
+  background-color: #d48216;
+  color: white;
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #fffc4d;
+  }
+}
+
+.opciones {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.boton_de_edificios:checked + .titulo-edificio + .opciones {
+  display: flex;
+}
+
+.opcion {
+  text-decoration: none;
+  color: #007bff;
+  font-weight: normal;
+
+  &:hover {
+    text-decoration: underline;
+    color: #0056b3;
+  }
+}

@@ -1,17 +1,14 @@
-@mixin grilla-zonas($columnas: 3, $gap: 2rem, $padding: 2rem) {
+.zonas-padre {
   display: grid;
-  grid-template-columns: repeat($columnas, 1fr);
-  gap: $gap;
-  padding: $padding;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem;
   text-align: center;
-
-  @media (max-width: 768px) {
+}
+@media (max-width: 768px) {
+  .zonas-padre {
     grid-template-columns: 1fr;
   }
-}
-
-.zonas-padre {
-  @include grilla-zonas();
 }
 
 .zona {
@@ -39,10 +36,9 @@
   border-radius: 5px;
   font-weight: bold;
   transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #fffc4d;
-  }
+}
+.titulo-edificio:hover {
+  background-color: #fffc4d;
 }
 
 .opciones {
@@ -60,9 +56,10 @@
   text-decoration: none;
   color: #007bff;
   font-weight: normal;
-
-  &:hover {
-    text-decoration: underline;
-    color: #0056b3;
-  }
 }
+.opcion:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/*# sourceMappingURL=estilo.css.map */
